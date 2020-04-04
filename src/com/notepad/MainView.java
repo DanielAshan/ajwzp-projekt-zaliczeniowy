@@ -1,24 +1,14 @@
 package com.notepad;
 
-import sun.applet.Main;
-
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class MainView {
-    private JTextPane textPane1;
-    private JButton button1;
     private JPanel mainPanel;
-    private JToolBar toolbar;
+    private JButton newMenuButton;
+    private JToolBar menuBar;
+    private JEditorPane editorPane;
 
     public MainView() {
-        button1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(null, "Button clicked");
-            }
-        });
     }
 
     public static void main(String[] args) {
