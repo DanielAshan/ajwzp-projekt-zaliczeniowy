@@ -1,6 +1,7 @@
 package com.notepad;
 
 import javax.swing.*;
+import java.awt.event.ActionListener;
 
 public class MainView {
     private JPanel mainPanel;
@@ -13,12 +14,16 @@ public class MainView {
     private JButton addWordToDictionaryMenuButton;
     private JButton aboutMenuButton;
     private JCheckBox hintsCheckBox;
+    private NotepadFile file;
 
     public MainView() {
+        this.file = new NotepadFile();
+        ActionListener openFileActionListener = new OpenFileButtonListener(this.editorPane, this.file);
+        openMenuButton.addActionListener(openFileActionListener);
     }
 
     public static void main(String[] args) {
-        JFrame frame = new JFrame("Notatnik");
+        JFrame frame = new JFrame("Notepad");
         frame.setContentPane(new MainView().mainPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
