@@ -15,12 +15,60 @@
           </grid>
         </constraints>
         <properties/>
+        <clientProperties>
+          <JToolBar.isRollover class="java.lang.Boolean" value="true"/>
+        </clientProperties>
         <border type="none"/>
         <children>
           <component id="fcd59" class="javax.swing.JButton" binding="newMenuButton">
             <constraints/>
             <properties>
               <text value="New"/>
+              <toolTipText value="New text editor"/>
+            </properties>
+          </component>
+          <component id="1bdb6" class="javax.swing.JButton" binding="openMenuButton">
+            <constraints/>
+            <properties>
+              <text value="Open"/>
+              <toolTipText value="Open text file"/>
+            </properties>
+          </component>
+          <component id="8974c" class="javax.swing.JButton" binding="saveMenuButton">
+            <constraints/>
+            <properties>
+              <text value="Save"/>
+              <toolTipText value="Save text to this file"/>
+            </properties>
+          </component>
+          <component id="349f1" class="javax.swing.JButton" binding="saveAsMenuButton">
+            <constraints/>
+            <properties>
+              <text value="Save as"/>
+              <toolTipText value="Save text as new file"/>
+            </properties>
+          </component>
+          <component id="7f4e7" class="javax.swing.JButton" binding="addWordToDictionaryMenuButton">
+            <constraints/>
+            <properties>
+              <text value="Dict"/>
+              <toolTipText value="Add word to dictionary"/>
+            </properties>
+          </component>
+          <component id="988c7" class="javax.swing.JButton" binding="aboutMenuButton">
+            <constraints/>
+            <properties>
+              <text value="About"/>
+              <toolTipText value="About program"/>
+            </properties>
+          </component>
+          <component id="5fa5b" class="javax.swing.JCheckBox" binding="hintsCheckBox" default-binding="true">
+            <constraints/>
+            <properties>
+              <enabled value="true"/>
+              <horizontalAlignment value="10"/>
+              <text value="Hints"/>
+              <toolTipText value="Enable/disable hints"/>
             </properties>
           </component>
         </children>
