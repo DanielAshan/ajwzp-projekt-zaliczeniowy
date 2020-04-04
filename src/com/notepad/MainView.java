@@ -7,6 +7,12 @@ public class MainView {
     private JButton newMenuButton;
     private JToolBar menuBar;
     private JEditorPane editorPane;
+    private JButton openMenuButton;
+    private JButton saveMenuButton;
+    private JButton saveAsMenuButton;
+    private JButton addWordToDictionaryMenuButton;
+    private JButton aboutMenuButton;
+    private JCheckBox hintsCheckBox;
 
     public MainView() {
     }
