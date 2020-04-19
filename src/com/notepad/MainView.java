@@ -19,7 +19,9 @@ public class MainView {
     public MainView() {
         this.file = new NotepadFile();
         ActionListener openFileActionListener = new OpenFileButtonListener(this.editorPane, this.file);
+        ActionListener saveFileActionListener = new SaveFileButtonListener(this.editorPane, this.file);
         openMenuButton.addActionListener(openFileActionListener);
+        saveMenuButton.addActionListener(saveFileActionListener);
     }
 
     public static void main(String[] args) {

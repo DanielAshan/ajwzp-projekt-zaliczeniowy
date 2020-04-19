@@ -2,6 +2,8 @@ package com.notepad;
 
 import javax.swing.*;
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -22,6 +24,12 @@ public class NotepadFile {
             this.file = fc.getSelectedFile();
             this.setOpened(true);
         }
+    }
+
+    public void saveFile(String text) throws IOException {
+        FileWriter fw = new FileWriter(this.file);
+        fw.write(text);
+        fw.close();
     }
 
     public URL getFileURL() throws MalformedURLException {
