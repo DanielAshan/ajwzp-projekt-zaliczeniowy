@@ -20,8 +20,10 @@ public class MainView {
         this.file = new NotepadFile();
         ActionListener openFileActionListener = new OpenFileButtonListener(this.editorPane, this.file);
         ActionListener saveFileActionListener = new SaveFileButtonListener(this.editorPane, this.file);
+        ActionListener newFileActionListener = new NewFileButtonListener(this.editorPane, this.file);
         openMenuButton.addActionListener(openFileActionListener);
         saveMenuButton.addActionListener(saveFileActionListener);
+        newMenuButton.addActionListener(newFileActionListener);
     }
 
     public static void main(String[] args) {
@@ -31,4 +33,5 @@ public class MainView {
         frame.pack();
         frame.setVisible(true);
     }
+
 }

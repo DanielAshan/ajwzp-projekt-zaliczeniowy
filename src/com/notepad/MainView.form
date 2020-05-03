@@ -26,6 +26,9 @@
               <text value="New"/>
               <toolTipText value="New text editor"/>
             </properties>
+            <clientProperties>
+              <html.disable class="java.lang.Boolean" value="false"/>
+            </clientProperties>
           </component>
           <component id="1bdb6" class="javax.swing.JButton" binding="openMenuButton">
             <constraints/>

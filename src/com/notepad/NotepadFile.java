@@ -17,6 +17,7 @@ public class NotepadFile {
     }
 
     public void openFile() {
+        this.file = null;
         final JFrame fcFrame = new JFrame("Select file");
         final JFileChooser fc = new JFileChooser();
         int result = fc.showDialog(fcFrame, "Select file");
@@ -27,11 +28,16 @@ public class NotepadFile {
     }
 
     public void saveFile(String text) throws IOException {
-        FileWriter fw = new FileWriter(this.file);
-        fw.write(text);
-        fw.close();
+        if (this.getOpened()) {
+            FileWriter fw = new FileWriter(this.file);
+            fw.write(text);
+            fw.close();
+        }
     }
-
+    public void clearFileInfo() {
+        this.file = null;
+        this.setOpened(false);
+    }
     public URL getFileURL() throws MalformedURLException {
         return this.file.toURI().toURL();
     }
