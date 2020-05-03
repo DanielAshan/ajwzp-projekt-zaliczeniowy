@@ -21,9 +21,11 @@ public class MainView {
         ActionListener openFileActionListener = new OpenFileButtonListener(this.editorPane, this.file);
         ActionListener saveFileActionListener = new SaveFileButtonListener(this.editorPane, this.file);
         ActionListener newFileActionListener = new NewFileButtonListener(this.editorPane, this.file);
+        ActionListener saveAsFileActionListener = new SaveAsFileButtonListener(this.editorPane, this.file);
         openMenuButton.addActionListener(openFileActionListener);
         saveMenuButton.addActionListener(saveFileActionListener);
         newMenuButton.addActionListener(newFileActionListener);
+        saveAsMenuButton.addActionListener(saveAsFileActionListener);
     }
 
     public static void main(String[] args) {
