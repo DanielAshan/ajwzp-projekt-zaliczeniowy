@@ -34,6 +34,22 @@ public class NotepadFile {
             fw.close();
         }
     }
+
+    public void saveAsFile(String text) throws IOException {
+        final JFrame fcFrame = new JFrame("Select file");
+        final JFileChooser fc = new JFileChooser();
+        int result = fc.showDialog(fcFrame, "Select file");
+        if (result == JFileChooser.APPROVE_OPTION) {
+            if (!fc.getSelectedFile().exists()) {
+                fc.getSelectedFile().createNewFile();
+            }
+            this.file = fc.getSelectedFile();
+            FileWriter fw = new FileWriter(this.file);
+            fw.write(text);
+            fw.close();
+        }
+    }
+
     public void clearFileInfo() {
         this.file = null;
         this.setOpened(false);
