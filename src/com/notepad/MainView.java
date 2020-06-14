@@ -22,10 +22,12 @@ public class MainView {
         ActionListener saveFileActionListener = new SaveFileButtonListener(this.editorPane, this.file);
         ActionListener newFileActionListener = new NewFileButtonListener(this.editorPane, this.file);
         ActionListener saveAsFileActionListener = new SaveAsFileButtonListener(this.editorPane, this.file);
+        ActionListener aboutActionListener = new AboutButtonListener();
         openMenuButton.addActionListener(openFileActionListener);
         saveMenuButton.addActionListener(saveFileActionListener);
         newMenuButton.addActionListener(newFileActionListener);
         saveAsMenuButton.addActionListener(saveAsFileActionListener);
+        aboutMenuButton.addActionListener(aboutActionListener);
     }
 
     public static void main(String[] args) {
